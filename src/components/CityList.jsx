@@ -1,7 +1,9 @@
 import styles from "./cityList.module.css";
+import Spinner from "./Spinner";
 
-function cityList() {
-  return <ul className={styles.cityList}>list</ul>;
+function cityList({ cities, isLoading }) {
+  if (isLoading) return <Spinner />;
+  return <ul className={styles.cityList}></ul>;
 }
 
 export default cityList;
