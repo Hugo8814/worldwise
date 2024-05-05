@@ -6,8 +6,15 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/cityList";
 //import PageNotFound from "./pages/PageNotFound";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [cities, setCities] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(function () {
+    setIsLoading(true);
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
