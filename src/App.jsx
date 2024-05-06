@@ -37,14 +37,14 @@ function App() {
         <Route index element={<Homepage />} />
         <Route path="product" element={<Product />} />
         <Route path="pricing" element={<Pricing />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="app" element={<AppLayout />}>
           <Route index element={<p>list</p>} />
           <Route
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
-          <Route path="city/:id" element={<City />} />
+          <Route path="cities/:id" element={<City />} />
           <Route
             path="countries"
             element={<CountiresList cities={cities} isLoading={isLoading} />}

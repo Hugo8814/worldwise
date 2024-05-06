@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-undef */
+import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
 
 const formatDate = (date) =>
@@ -11,6 +12,8 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
+  const { id } = useParams();
+
   // TEMP DATA
   const currentCity = {
     cityName: "Lisbon",
@@ -22,7 +25,7 @@ function City() {
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
-    <h1>Hello</h1>
+    <h1>{id}</h1>
 
     // <div className={styles.city}>
     //   <div className={styles.row}>
