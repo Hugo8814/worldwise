@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "./Map.module.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
 function Map() {
