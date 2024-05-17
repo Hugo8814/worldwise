@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 
 const BASE_URL = "http://localhost:8000";
@@ -39,4 +40,5 @@ function useCities() {
   return context;
 }
 
-export { useCities, CitiesProvider };
+// eslint-disable-next-line react-refresh/only-export-components
+export { CitiesProvider, useCities };

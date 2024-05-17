@@ -1,9 +1,12 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import CityItem from "./CityItem";
 import styles from "./cityList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
+import { useCities } from "../Contexts/CitiesContext";
 
-function cityList({ cities, isLoading }) {
+function cityList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
 
   if (!cities.length) return <Message message="add your first city" />;
