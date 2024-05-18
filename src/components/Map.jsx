@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function Map() {
   const navigate = useNavigate();
+  const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   const [searchParams, setSearchParams] = useSearchParams();
