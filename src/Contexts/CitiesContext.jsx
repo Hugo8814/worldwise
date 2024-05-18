@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const BASE_URL = "http://localhost:8000";
 
