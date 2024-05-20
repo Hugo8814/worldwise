@@ -26,13 +26,13 @@ function Map() {
     getPosition,
   } = useGeolocation();
 
-  const { mapLat, mapLng } = useUrlPosition();
+  const { lat, lng } = useUrlPosition();
 
   useEffect(
     function () {
-      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
+      if (lat && lng) setMapPosition([lat, lng]);
     },
-    [mapLat, mapLng]
+    [lat, lng]
   );
 
   useEffect(
