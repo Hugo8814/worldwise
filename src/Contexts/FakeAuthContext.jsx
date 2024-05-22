@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useReducer } from "react";
 
 const AuthContext = createContext();
@@ -32,6 +33,7 @@ const FAKE_USER = {
   password: "qwerty",
   avatar: "https://i.pravatar.cc/100?u=zz",
 };
+
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
@@ -39,32 +41,28 @@ function AuthProvider({ children }) {
   );
 
   function login(email, password) {
-    if (email === FAKE_USER.email && password === FAKE_USER.password)
+    if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "login", payload: FAKE_USER });
-    {
-    }
-    function logout() {}
-
-    return (
-      <AuthContext.Provider
-        value={{
-          user,
-          isAuthenticated,
-          login,
-          logout,
-        }}
-      >
-        {children}
-      </AuthContext.Provider>
-    );
-  }
-
-  function useAuth() {
-    const context = useContext(AuthContext);
-    if (context === undefined) {
-      throw new Error("useAuth must be used within an AuthProvider");
     }
   }
+
+  function logout() {
+    dispatch({ type: "logout" });
+  }
+
+  return (
+    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
 }
 
 export { useAuth, AuthProvider };
