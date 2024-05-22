@@ -11,28 +11,6 @@
         "lng": -9.140900099907554
       },
       "id": "73930385"
-    },
-    {
-      "id": "8276",
-      "cityName": "Castello de la Plana",
-      "country": "Spain",
-      "date": "2024-05-22T10:01:57.705Z",
-      "notes": "",
-      "position": {
-        "lat": "40.021436146476105",
-        "lng": "-0.05922317504882813"
-      }
-    },
-    {
-      "id": "6a03",
-      "cityName": "Castello de la Plana",
-      "country": "Spain",
-      "date": "2024-05-22T10:30:11.506Z",
-      "notes": "",
-      "position": {
-        "lat": "40.00171445433156",
-        "lng": "-0.07072448730468751"
-      }
     }
   ]
 }
