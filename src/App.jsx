@@ -7,13 +7,13 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/cityList";
 //import PageNotFound from "./pages/PageNotFound";
+import { CitiesProvider } from "./Contexts/CitiesContext";
+import { AuthProvider } from "./Contexts/FakeAuthContext";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import { useState, useEffect } from "react";
 import CountiresList from "./components/CountiresList";
 import City from "./components/City";
 import Form from "./components/Form";
-import { CitiesProvider } from "./Contexts/CitiesContext";
-import { AuthProvider } from "./Contexts/FakeAuthContext";
-import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (

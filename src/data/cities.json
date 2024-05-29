@@ -22,6 +22,17 @@
         "lat": "40.12009038025332",
         "lng": "-0.1064300537109375"
       }
+    },
+    {
+      "id": "50dc",
+      "cityName": "Milton Keynes",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "date": "2024-05-29T09:56:10.452Z",
+      "notes": "",
+      "position": {
+        "lat": "52.15034402766095",
+        "lng": "-0.736083984375"
+      }
     }
   ]
 }
